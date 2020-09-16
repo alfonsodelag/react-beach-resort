@@ -7,23 +7,23 @@ export default class OurServices extends Component {
         services: [
             {
                 icon: <FaCocktail />,
-                title: "Best prices",
-                info: 'We offer the lowest prices'
+                title: 'Free Cocktails',
+                info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?'
             },
             {
                 icon: <FaHiking />,
-                title: "Our customer service",
-                info: 'We offer the best service possible for our clients'
+                title: 'Endless Hiking',
+                info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?'
             },
             {
                 icon: <FaShuttleVan />,
-                title: "Our technology",
-                info: 'We use the latest technology for your needs'
+                title: 'Free Shuttle',
+                info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?'
             },
             {
                 icon: <FaBeer />,
-                title: "Customer Satisfaction",
-                info: 'We believe in fulfilling your expectations'
+                title: 'Customer Satisfaction',
+                info: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?'
             },
         ]
     }

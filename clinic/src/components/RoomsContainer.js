@@ -17,9 +17,6 @@ function RoomContainer({ context }) {
     );
 }
 
-
-
-
 export default withRoomConsumer(RoomContainer)
 
 // export default function RoomsContainer() {

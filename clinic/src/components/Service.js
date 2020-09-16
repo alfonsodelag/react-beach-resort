@@ -21,7 +21,6 @@ export default function Service({ service }) {
     </article>
 }
 
-
 Service.propTypes = {
     service: PropTypes.shape({
         name: PropTypes.string.isRequired,
