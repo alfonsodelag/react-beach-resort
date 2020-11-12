@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home';
 import Services from './pages/Services';
 import SingleService from './pages/SingleService';
+import Login from './pages/Login';
 import Error from './pages/Error';
 
 import { Route, Switch } from 'react-router-dom'
@@ -13,6 +14,8 @@ import { auth } from './firebase';
 import NavBar from './components/NavBar';
 
 function App() {
+  const [{ user }, dispatch] = useStateValue();
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -35,6 +38,8 @@ function App() {
     }
   }, []);
 
+  console.log("USER IS >>>", user);
+
   return (
     <>
       <NavBar />
@@ -42,6 +47,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/services/" component={Services} />
         <Route exact path="/services/:slug" component={SingleService} />
+        <Route exact path="/login" component={Login} />
         <Route component={Error} />
       </Switch>
     </>

@@ -2,15 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { StateProvider } from './StateProvider';
+import reducer, { initialState } from './reducer';
 import { ServiceProvider } from './context'
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <ServiceProvider>
-    <Router>
-      <App />
-    </Router>
-  </ServiceProvider>,
+  <StateProvider initialState={initialState} reducer={reducer}>
+    <ServiceProvider>
+      <Router>
+        <App />
+      </Router>
+    </ServiceProvider>
+  </StateProvider>,
   document.getElementById('root')
 );
 

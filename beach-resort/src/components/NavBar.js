@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import logo from '../images/logo.svg'
 import { BsFillGrid3X2GapFill } from "react-icons/bs";
 import { Link } from 'react-router-dom'
+import { useStateValue } from '../StateProvider';
+
 export default class NavBar extends Component {
+
     state = {
         isOpen: false
     }
@@ -29,6 +32,9 @@ export default class NavBar extends Component {
                         </li>
                         <li>
                             <Link to="/services">Rooms</Link>
+                        </li>
+                        <li>
+                            <Link to="/login">Login</Link>
                         </li>
                     </ul>
                 </div>

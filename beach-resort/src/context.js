@@ -18,7 +18,7 @@ class ServiceProvider extends Component {
         minSize: 0,
         maxSize: 0,
         breakfast: false,
-        pets: false
+        pets: false,
     };
 
     getData = async () => {
@@ -55,7 +55,6 @@ class ServiceProvider extends Component {
     }
 
     formatData(items) {
-
         let tempItems = items.map(item => {
             // debugger
             let id = item.sys.id
