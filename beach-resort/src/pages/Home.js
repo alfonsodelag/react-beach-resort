@@ -15,7 +15,7 @@ export const Home = () => {
                     <Link to="/services" className="btn-primary"
                     >
                         Our Rooms
-                </Link>
+                    </Link>
                 </Banner>
             </Hero>
             <OurServices />

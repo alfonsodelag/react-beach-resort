@@ -25,7 +25,7 @@ export default class SingleService extends Component {
             return <div className="error">
                 <h3>No such service could be found...</h3>
                 <Link to="/services" className="btn-primary">
-                    Back to Services
+                    Back to Rooms
                 </Link>
             </div>
         }
@@ -41,7 +41,7 @@ export default class SingleService extends Component {
                 <StyledHero img={mainImg || this.state.defaultBcg}>
                     <Banner title={`${name} service`}>
                         <Link to="/services" className="btn-primary">
-                            Back to services
+                            Back to Rooms
                         </Link>
                     </Banner>
                 </StyledHero>

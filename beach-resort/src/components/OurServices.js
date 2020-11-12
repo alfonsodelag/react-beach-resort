@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from "react-icons/fa"
 import Title from './Title'
+import { Link } from 'react-router-dom';
 
 export default class OurServices extends Component {
     state = {

@@ -11,7 +11,7 @@ const Services = () => {
                 <Banner title="Our Rooms">
                     <Link to="/" className="btn-primary">
                         return home
-                </Link>
+                    </Link>
                 </Banner>
             </Hero>
             <RoomsContainer />

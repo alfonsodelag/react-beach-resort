@@ -1,5 +1,5 @@
 import React from 'react'
-import RoomsFilter from './RoomFilter'
+import RoomFilter from './RoomFilter'
 import RoomsList from './RoomList'
 import { withRoomConsumer } from '../context'
 import Loading from './Loading'
@@ -11,7 +11,7 @@ function RoomContainer({ context }) {
     }
     return (
         <>
-            <RoomsFilter services={services} />
+            <RoomFilter services={services} />
             <RoomsList services={sortedServices} />
         </>
     );
@@ -19,14 +19,3 @@ function RoomContainer({ context }) {
 
 export default withRoomConsumer(RoomContainer)
 
-// export default function RoomsContainer() {
-//     return (
-//         <ServiceConsumer>
-//             {
-//                 (value) => {
-//                     const { loading, sortedServices, services } = value
-
-//             }
-//         </ServiceConsumer>
-//     )
-// }

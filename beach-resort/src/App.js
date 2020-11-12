@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css'
 
 import Home from './pages/Home';
@@ -7,11 +7,34 @@ import SingleService from './pages/SingleService';
 import Error from './pages/Error';
 
 import { Route, Switch } from 'react-router-dom'
+import { useStateValue } from './StateProvider';
+import { auth } from './firebase';
 
 import NavBar from './components/NavBar';
 
-
 function App() {
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // The user is logged in
+        dispatch({
+          type: "SET_USER",
+          user: authUser
+        })
+      } else {
+        // The user is logged out
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        })
+      }
+    })
+    return () => {
+      // Cleanup operations go in here
+      unsubscribe();
+    }
+  }, []);
+
   return (
     <>
       <NavBar />
