@@ -12,6 +12,7 @@ import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
 
 import NavBar from './components/NavBar';
+import Checkout from './pages/Checkout';
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -48,6 +49,7 @@ function App() {
         <Route exact path="/services/" component={Services} />
         <Route exact path="/services/:slug" component={SingleService} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/checkout" component={Checkout} />
         <Route component={Error} />
       </Switch>
     </>

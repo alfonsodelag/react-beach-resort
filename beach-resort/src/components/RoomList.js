@@ -1,5 +1,4 @@
 import React from 'react'
-import RoomsContainer from './RoomsContainer'
 import Service from './Service'
 
 export default function RoomList({ services }) {

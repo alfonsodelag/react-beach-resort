@@ -152,8 +152,10 @@ h6 {
 }
 
 .show-nav {
-  height: 100px;
+  height: 150px;
 }
+
+
 
 @media screen and (min-width: 768px) {
   .nav-btn {
@@ -415,6 +417,14 @@ h6 {
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
+}
+
+.room-button {
+  margin: 0 auto;
+  display: block;
+  background-color: #CFB091;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
 }
 
 /* end of room  */

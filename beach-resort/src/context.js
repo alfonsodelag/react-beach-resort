@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import RoomsContainer from './components/RoomsContainer'
 import Client from './Contentful'
 
 const ServiceContext = React.createContext();

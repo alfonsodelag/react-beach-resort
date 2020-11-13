@@ -1,3 +1,4 @@
+// From ecommerce project
 export const initialState = {
     basket: [],
     user: null,
