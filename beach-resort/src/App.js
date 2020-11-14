@@ -13,6 +13,10 @@ import { auth } from './firebase';
 
 import NavBar from './components/NavBar';
 import Checkout from './pages/Checkout';
+import Viviendas from './pages/Viviendas';
+import CasaMobil from './pages/CasaMobil';
+import Complemento from './pages/Complemento';
+import Vivienda1 from './components/Vivienda1';
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -26,7 +30,7 @@ function App() {
           user: authUser
         })
       } else {
-        // The user is logged out
+        // The user is logged out or hasn't logged in
         dispatch({
           type: "SET_USER",
           user: null,
@@ -39,13 +43,14 @@ function App() {
     }
   }, []);
 
-  console.log("USER IS >>>", user);
-
   return (
     <>
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/viviendas/vivienda1" component={Vivienda1} />
+        <Route exact path="/casa-mobil" component={CasaMobil} />
+        <Route exact path="/complementos" component={Complemento} />
         <Route exact path="/services/" component={Services} />
         <Route exact path="/services/:slug" component={SingleService} />
         <Route exact path="/login" component={Login} />

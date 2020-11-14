@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import { FaRestroom } from 'react-icons/fa';
 
 export default function Service({ service }) {
-    console.log("service prop from Service.js", service)
+    const { id } = service;
     const [{ basket }, dispatch] = useStateValue()
 
     const addToBasket = () => {
@@ -14,6 +14,7 @@ export default function Service({ service }) {
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
+                id,
                 name,
                 slug,
                 images,

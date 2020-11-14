@@ -8,8 +8,6 @@ export default class FeaturedServices extends Component {
 
     static contextType = ServiceContext;
     render() {
-
-
         let { loading, featuredServices: services } = this.context;
         services = services.map(service => {
             return <Service key={service.id} service={service} />

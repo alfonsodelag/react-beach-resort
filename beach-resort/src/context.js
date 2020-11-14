@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Client from './Contentful'
 
 const ServiceContext = React.createContext();
-// 
+
 class ServiceProvider extends Component {
     state = {
         services: [],
@@ -22,7 +22,6 @@ class ServiceProvider extends Component {
 
     getData = async () => {
         try {
-
             let response = await Client.getEntries({
                 content_type: "beachResortRoom",
                 // order: "-fields.price"
